@@ -21,107 +21,47 @@ A production-ready full-stack e-commerce web application built with modern web t
 ```
 E-commerce Application/
 ├── frontend/                 # React frontend application
-│   ├── public/              # Static assets
 │   └── src/
-│       ├── assets/          # Images, fonts, and other static assets
 │       ├── components/      # Reusable React components
-│       │   ├── common/      # Common components (Header, Footer, ProtectedRoute)
-│       │   ├── auth/        # Authentication components (LoginForm, SignupForm)
-│       │   ├── product/     # Product-related components
-│       │   ├── cart/        # Shopping cart components
-│       │   └── order/       # Order-related components
 │       ├── pages/           # Page components
-│       │   ├── Login.jsx
-│       │   ├── Signup.jsx
-│       │   ├── Home.jsx
-│       │   ├── Products.jsx
-│       │   ├── ProductDetails.jsx
-│       │   ├── Cart.jsx
-│       │   └── Orders.jsx
 │       ├── routes/          # Routing configuration
-│       │   └── AppRoutes.jsx
 │       ├── services/        # API service functions
-│       │   ├── api.js
-│       │   ├── authService.js
-│       │   ├── productService.js
-│       │   ├── cartService.js
-│       │   └── orderService.js
 │       ├── context/         # React Context providers
-│       │   └── AuthContext.jsx
-│       ├── hooks/           # Custom React hooks
-│       ├── utils/           # Utility functions
-│       ├── App.jsx          # Root component
-│       └── main.jsx         # Application entry point
+│       └── utils/           # Utility functions
 │
 ├── backend/                 # Node.js backend application
 │   └── src/
 │       ├── config/         # Configuration files
-│       │   ├── db.js       # Database connection
-│       │   └── env.js      # Environment variables
 │       ├── models/         # Mongoose models
-│       │   ├── User.js
-│       │   ├── Product.js
-│       │   ├── Cart.js
-│       │   └── Order.js
 │       ├── controllers/    # Request handlers
-│       │   ├── authController.js
-│       │   ├── productController.js
-│       │   ├── cartController.js
-│       │   └── orderController.js
 │       ├── routes/         # API route definitions
-│       │   ├── authRoutes.js
-│       │   ├── productRoutes.js
-│       │   ├── cartRoutes.js
-│       │   └── orderRoutes.js
-│       ├── middleware/     # Express middleware
-│       │   ├── authMiddleware.js
-│       │   └── errorMiddleware.js
-│       ├── services/       # Business logic services
-│       ├── utils/          # Utility functions
-│       ├── app.js          # Express app configuration
-│       └── server.js       # Server entry point
+│       └── middleware/     # Express middleware
 │
-├── README.md               # Project documentation
-└── PROJECT_CONTEXT.md      # Project context and development rules
+└── README.md
 ```
 
-## Folder Structure Explanation
+## Project Overview
 
-### Frontend Structure
+### 1. Authentication
+- Signup
+- Login
+- Logout
 
-- **components/**: Reusable UI components organized by feature
-  - **common/**: Shared components used across multiple pages
-  - **auth/**: Authentication-related components
-  - **product/**: Product display and interaction components
-  - **cart/**: Shopping cart components
-  - **order/**: Order-related components
+### 2. User
+- View profile
+- Edit profile (optional)
 
-- **pages/**: Full page components that represent routes
-- **routes/**: React Router configuration
-- **services/**: API communication layer, separated by domain
-- **context/**: React Context API for global state management
-- **hooks/**: Custom React hooks for reusable logic
-- **utils/**: Helper functions and utilities
+### 3. Product (E-commerce)
+- View products
+- View product details
 
-### Backend Structure
+### 4. Cart
+- Add to cart
+- Remove from cart
 
-- **config/**: Application configuration (database, environment)
-- **models/**: Mongoose schemas defining data structures
-- **controllers/**: Request handlers that process HTTP requests
-- **routes/**: API endpoint definitions
-- **middleware/**: Express middleware for cross-cutting concerns
-- **services/**: Business logic layer (optional, for complex operations)
-- **utils/**: Helper functions and utilities
-
-## Architecture Pattern
-
-This project follows **Clean Architecture** and **MVC (Model-View-Controller)** patterns:
-
-- **Models**: Data structures and database schemas
-- **Views**: React components (frontend)
-- **Controllers**: Request handlers that coordinate between models and views
-- **Routes**: API endpoint definitions
-- **Middleware**: Cross-cutting concerns (authentication, error handling)
+### 5. Orders (Basic)
+- Place order
+- View order history
 
 ## Getting Started
 
@@ -150,13 +90,6 @@ This project follows **Clean Architecture** and **MVC (Model-View-Controller)** 
 5. Start the development servers:
    - Frontend: `npm start` (from frontend directory)
    - Backend: `npm start` (from backend directory)
-
-## Development Notes
-
-- This is a skeleton structure with empty files
-- Each file contains comments explaining its purpose
-- No business logic or authentication logic has been implemented
-- Follow the comments in each file to understand where to add implementation
 
 ## License
 
